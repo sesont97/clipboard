@@ -321,9 +321,8 @@ export class RNCClipboardTurboModule extends TurboModule {
     let systemPasteboard = pasteboard.getSystemPasteboard();
     systemPasteboard.clear().then(() => {
       systemPasteboard.getData().then((pasteData) => {
-        for (let i = 0; i < content.length; i++) {
-          pasteData.addRecord(pasteboard.MIMETYPE_TEXT_PLAIN, content[i]);
-          logger.debug(TAG, `[RNOH]:setStrings,PasteData--addRecord:${content[i]}`);
+        while(content.length > 0) {
+          pasteData.addRecord(pasteboard.MIMETYPE_TEXT_PLAIN, content.pop())
         }
 
         // setData
