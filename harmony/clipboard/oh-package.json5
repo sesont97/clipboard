@@ -3,7 +3,7 @@
   "types": "",
   "devDependencies": {},
   "name": "@react-native-oh-tpl/clipboard",
-  "version": "1.13.2-0.0.10-rc.0",
+  "version": "1.13.2-0.0.9",
   "description": "",
   "main": "index.ets",
   "dependencies": {
